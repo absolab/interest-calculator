@@ -1,9 +1,22 @@
-$color-main: #031385;
+// palette: https://color.adobe.com/ko/create/color-wheel
+
+$color-primary-main: #d2ff69;
+$color-primary-light: #e9ffb5;
+$color-primary-dark: #8eb337;
+
+$color-secondary-main: #d669ff;
+$color-secondary-light: #ebb5ff;
+$color-secondary-dark: #9237b3;
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
-.root {
-    border: 3px solid $color-main;
+// layout
+.body {
+  display: flex;
+}
+
+.section {
+  border-radius: 5px;
 }
