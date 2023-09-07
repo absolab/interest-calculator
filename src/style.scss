@@ -8,15 +8,74 @@ $color-secondary-main: #d669ff;
 $color-secondary-light: #ebb5ff;
 $color-secondary-dark: #9237b3;
 
+html {
+  background-color: #f1f2f4;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
   margin: 0;
 }
 
-// layout
-.body {
+#root {
   display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
+#header-wrap {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+#header {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
 
-.section {
+  background-color: rgb(247, 249, 252);
+  border: 1px solid rgba(38, 85, 115, 0.15);
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;
+
+  .item-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    > .item-title {
+      font-size: 13px;
+      color: #333333;
+      padding-bottom: 3px;
+    }
+    > .item-content {
+      display: flex;
+      > .item-input {
+        flex-grow: 1;
+        margin: auto 0;
+        padding: 10px 7px;
+        border: 1px solid rgba(38, 85, 115, 0.15);
+        border-radius: 5px;
+        text-align: right;
+      }
+      > .item-input:focus {
+        outline: none;
+        border-color: $color-primary-dark;
+      }
+      > .month-text {
+        margin: auto 0 auto 10px;
+      }
+    }
+  }
+  .item-button {
+    height: 34px;
+    background-color: #d2ff69;
+    color: #333333;
+    border: 1px solid rgba(38, 85, 115, 0.15);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .item-button:hover {
+    background-color: #bfec54;
+  }
 }
